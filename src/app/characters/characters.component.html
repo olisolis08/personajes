@@ -1,0 +1,22 @@
+<h1>Olivia de la Cruz Solis</h1> <h1>IDGS-81</h1>
+<hr>
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Imagen</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Status</th>
+      <th scope="col">Gender</th>
+    </tr>
+  </thead>
+  <!-- recorre el for y crea una columna por cada registro -->
+  <tbody *ngFor="let character of characters">
+    <!-- crea una columna por cada registro -->
+    <tr>
+      <th scope="row"><app-characters-tabla [character]="character"></app-characters-tabla></th>
+      <th scope="row"><app-characters-nombre [character]="character"></app-characters-nombre></th>
+      <th scope="row"><app-characters-status [character]="character"></app-characters-status></th>
+      <th scope="row"><app-characters-gender [character]="character"></app-characters-gender></th>
+    </tr>
+  </tbody>
+</table>
